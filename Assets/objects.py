@@ -1,8 +1,8 @@
-from .imports import Number, pygame, math
+from .imports import Number, termgame, math
 class Wall:
-    def __init__(self,points: pygame.Rect):
+    def __init__(self,points: termgame.Rect):
         self.points = points
         self.rect = points
 
     def draw(self, screen):
-        pygame.draw.rect(screen, pygame.Color("grey"), (self.rect.x, self.rect.y, self.rect.width, self.rect.height))
+        termgame.draw.rect(screen, termgame.Color("grey"), (self.rect.x, self.rect.y, self.rect.width, self.rect.height))

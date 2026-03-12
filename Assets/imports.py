@@ -1,4 +1,4 @@
-import pygame, math
+import math
 from typing import Literal, Iterable
 Number = int | float
 
@@ -11,7 +11,7 @@ def combineTuple(a: tuple[Number, ...],b: tuple[Number, ...], mode: Literal["sum
         return tuple(map(subtract, zip(a, b)))
     raise ValueError("Invalid mode. Valid modes: sum, subtract.")
 
-def castRay(screen: pygame.Surface, start: tuple[Number,Number], direction: Number, collisionObjects: Iterable[pygame.Rect]) -> tuple[tuple[Number, Number], Number]:
+def castRay(screen: termgame.Surface, start: tuple[Number,Number], direction: Number, collisionObjects: Iterable[termgame.Rect]) -> tuple[tuple[Number, Number], Number]:
     distance = 0
     testPoint = start
     while True:
